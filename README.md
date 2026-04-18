@@ -20,15 +20,15 @@ We selected 30 prompts from the **HumanEval-Java** dataset. Below are the first 
 
 | ID       | Method             | Description                         | Assigned To  |
 | -------- | ------------------ | ----------------------------------- | ------------ |
-| Java/23  | `strlen`           | String length *(Mandatory)*         | ADA KAYNAK   |
-| Java/27  | `flipCase`         | Upper-lower case swap *(Mandatory)* | ADA KAYNAK   |
-| Java/15  | `stringSequence`   | Sequence from 0 to n                | ADA KAYNAK   |
+| Java/23  | `strlen`           | String length *(Mandatory)*         | VEYSEL ÇELİK |
+| Java/27  | `flipCase`         | Upper-lower case swap *(Mandatory)* | VEYSEL ÇELİK |
+| Java/15  | `stringSequence`   | Sequence from 0 to n                | VEYSEL ÇELİK |
 | Java/45  | `triangleArea`     | Area calculation                    | CEMAL YILMAZ |
 | Java/53  | `add`              | Simple addition                     | CEMAL YILMAZ |
 | Java/79  | `decimalToBinary`  | Binary conversion                   | CEMAL YILMAZ |
-| Java/97  | `multiplyDigit`    | Digit multiplication                | VEYSEL ÇELİK |
-| Java/100 | `makeAPile`        | Stone pile logic                    | VEYSEL ÇELİK |
-| Java/138 | `isEqualToSumEven` | Sum of 4 even numbers               | VEYSEL ÇELİK |
+| Java/97  | `multiplyDigit`    | Digit multiplication                | ADA KAYNAK   |
+| Java/100 | `makeAPile`        | Stone pile logic                    | ADA KAYNAK   |
+| Java/138 | `isEqualToSumEven` | Sum of 4 even numbers               | ADA KAYNAK   |
 | Java/34  | `uniqueSorted`     | Unique sorted list                  | VEYSEL ÇELİK |
 
 ---
