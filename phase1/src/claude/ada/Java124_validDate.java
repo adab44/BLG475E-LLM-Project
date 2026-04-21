@@ -12,7 +12,6 @@ class Solution {
         try {
             int month = Integer.parseInt(parts[0]);
             int day = Integer.parseInt(parts[1]);
-            int year = Integer.parseInt(parts[2]);
             if (month < 1 || month > 12 || day < 1) return false;
             int[] maxDays = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
             return day <= maxDays[month];
