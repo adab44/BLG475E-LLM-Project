@@ -9,7 +9,7 @@ This project evaluates the performance of Large Language Models (LLMs) in genera
 ## 👥 TEAM MEMBERS
 
 * **CEMAL YILMAZ** – 820210317
-* **ADA KAYNAK**
+* **ADA KAYNAK** - 820210314
 * **VEYSEL ÇELİK** – 150210702
 ---
 
