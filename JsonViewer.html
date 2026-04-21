@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JSONL Viewer</title>
+<style>
+    body {
+        font-family: Consolas, monospace;
+        background: #0f172a;
+        color: #e2e8f0;
+        padding: 20px;
+    }
+    .card {
+        background: #1e293b;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+    .title {
+        font-weight: bold;
+        color: #38bdf8;
+        margin-bottom: 8px;
+    }
+    .field {
+        margin: 4px 0;
+    }
+    pre {
+        background: #020617;
+        padding: 10px;
+        border-radius: 6px;
+        overflow-x: auto;
+    }
+    input {
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+
+<h2>📄 JSONL Viewer</h2>
+
+<input type="file" id="fileInput" accept=".jsonl">
+
+<div id="container"></div>
+
+<script>
+document.getElementById('fileInput').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+        const lines = e.target.result.split("\n").filter(line => line.trim() !== "");
+        const container = document.getElementById("container");
+        container.innerHTML = "";
+
+        lines.forEach((line, index) => {
+            try {
+                const obj = JSON.parse(line);
+
+                const card = document.createElement("div");
+                card.className = "card";
+
+                card.innerHTML = `
+                    <div class="title">Entry ${index + 1}</div>
+                    <div class="field"><b>ID:</b> ${obj.task_id || "-"}</div>
+                    <div class="field"><b>Prompt:</b></div>
+                    <pre>${escapeHtml(obj.prompt || "")}</pre>
+                    <div class="field"><b>Entry Point:</b> ${obj.entry_point || "-"}</div>
+                    <div class="field"><b>Canonical Solution:</b></div>
+                    <pre>${escapeHtml(obj.canonical_solution || "")}</pre>
+                    <div class="field"><b>Test:</b></div>
+                    <pre>${escapeHtml(obj.test || "")}</pre>
+                `;
+
+                container.appendChild(card);
+            } catch (err) {
+                console.error("Invalid JSON line:", line);
+            }
+        });
+    };
+
+    reader.readAsText(file);
+});
+
+function escapeHtml(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+}
+</script>
+
+</body>
+</html>
