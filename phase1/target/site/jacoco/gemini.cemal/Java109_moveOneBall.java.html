@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="tr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Java109_moveOneBall.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">llm-testing-pipeline</a> &gt; <a href="index.source.html" class="el_package">gemini.cemal</a> &gt; <span class="el_source">Java109_moveOneBall.java</span></div><h1>Java109_moveOneBall.java</h1><pre class="source lang-java linenums">package gemini.cemal;
+/* @Authors
+ * Student Names: Cemal Yılmaz
+ * Student IDs: 820210317
+ */
+import java.util.*;
+import java.lang.*;
+
+<span class="fc" id="L9">public class Java109_moveOneBall {</span>
+    public boolean moveOneBall(List&lt;Integer&gt; arr) {
+<span class="fc bfc" id="L11" title="All 2 branches covered.">        if (arr.size() == 0) {</span>
+<span class="fc" id="L12">            return true;</span>
+        }
+<span class="fc" id="L14">        List&lt;Integer&gt; sorted_arr = new ArrayList&lt;&gt;(arr);</span>
+<span class="fc" id="L15">        Collections.sort(sorted_arr);</span>
+
+<span class="fc" id="L17">        int min_value = Collections.min(arr);</span>
+<span class="fc" id="L18">        int min_index = arr.indexOf(min_value);</span>
+<span class="fc" id="L19">        List&lt;Integer&gt; my_arr = new ArrayList&lt;&gt;(arr.subList(min_index, arr.size()));</span>
+<span class="fc" id="L20">        my_arr.addAll(arr.subList(0, min_index));</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">        for (int i = 0; i &lt; arr.size(); i++) {</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">            if (!my_arr.get(i).equals(sorted_arr.get(i))) {</span>
+<span class="fc" id="L23">                return false;</span>
+            }
+        }
+<span class="fc" id="L26">        return true;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

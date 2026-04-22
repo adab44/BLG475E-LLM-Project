@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: gemini.cemal.TestJava85
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in gemini.cemal.TestJava85

@@ -1,0 +1,11 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+llm-testing-pipeline,gemini.cemal,Java3_belowZero,0,27,0,4,0,8,0,4,0,2
+llm-testing-pipeline,gemini.cemal,Java64_vowelsCount,0,52,1,9,0,9,1,6,0,2
+llm-testing-pipeline,gemini.cemal,Java124_validDate,18,182,14,28,5,23,14,9,0,2
+llm-testing-pipeline,gemini.cemal,Java85_add,0,31,0,4,0,6,0,4,0,2
+llm-testing-pipeline,gemini.cemal,Java52_belowThreshold,0,22,0,4,0,6,0,4,0,2
+llm-testing-pipeline,gemini.cemal,Java79_decimalToBinary,0,7,0,0,0,2,0,2,0,2
+llm-testing-pipeline,gemini.cemal,Java45_triangleArea,0,9,0,0,0,2,0,2,0,2
+llm-testing-pipeline,gemini.cemal,Java119_matchParens,0,82,0,12,0,16,0,8,0,2
+llm-testing-pipeline,gemini.cemal,Java53_add,0,7,0,0,0,2,0,2,0,2
+llm-testing-pipeline,gemini.cemal,Java109_moveOneBall,0,62,0,6,0,13,0,5,0,2

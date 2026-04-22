@@ -1,0 +1,16 @@
+# Cemal Yılmaz 820210317 - Gemini Logs
+Folders created.
+Implemented 10 HumanEval Java tasks and their test suites:
+1. Java3_belowZero.java
+2. Java45_triangleArea.java
+3. Java52_belowThreshold.java
+4. Java53_add.java
+5. Java64_vowelsCount.java
+6. Java79_decimalToBinary.java
+7. Java85_add.java
+8. Java109_moveOneBall.java
+9. Java119_matchParens.java
+10. Java124_validDate.java
+
+Configured phase1/pom.xml with JUnit 5 and JaCoCo for automated testing and coverage reporting.
+Project follows standard Maven directory structure.
