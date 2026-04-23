@@ -1,6 +1,6 @@
-# Log - Java/53 - add
-**LLM:** Gemini (gemini-3-flash)
-**Date:** 2026-04-22
+Log - Java/45 - triangleArea
+LLM: Sonnet 4.6
+Date: 2026-04-23
 
 ## Prompt Sent:
 ```java
@@ -9,13 +9,11 @@ import java.lang.*;
 
 class Solution {
     /**
-    Add two numbers x and y
-    >>> add(2, 3)
-    5
-    >>> add(5, 7)
-    12
+    Given length of a side and high return area for a triangle.
+    >>> triangleArea(5, 3)
+    7.5
      */
-    public int add(int x, int y) {
+    public double triangleArea(double a, double h) {
 ```
 
 ## Agent Response:
@@ -28,13 +26,12 @@ import java.util.*;
 import java.lang.*;
 
 class Solution {
-    int add(int x, int y) {
-        return x + y;
+    double triangleArea(double a, double h) {
+        return (a * h) / 2.0;
     }
 }
 ```
 
-
-
-## Notes:
+Notes:
 Original HumanEval prompt used without modification. Code used without modification. All base tests passed.
+

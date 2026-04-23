@@ -1,6 +1,6 @@
-# Log - Java/109 - moveOneBall
-**LLM:** Gemini (gemini-3-flash)
-**Date:** 2026-04-22
+Log - Java/109 - moveOneBall
+LLM: Sonnet 4.6
+Date: 2026-04-23
 
 ## Prompt Sent:
 ```java
@@ -48,27 +48,27 @@ import java.lang.*;
 
 class Solution {
     boolean moveOneBall(List<Integer> arr) {
-        if (arr.size() == 0) {
+        if (arr.isEmpty()) {
             return true;
         }
-        List<Integer> sorted_arr = new ArrayList<>(arr);
-        Collections.sort(sorted_arr);
 
-        int min_value = Collections.min(arr);
-        int min_index = arr.indexOf(min_value);
-        List<Integer> my_arr = new ArrayList<>(arr.subList(min_index, arr.size()));
-        my_arr.addAll(arr.subList(0, min_index));
-        for (int i = 0; i < arr.size(); i++) {
-            if (!my_arr.get(i).equals(sorted_arr.get(i))) {
-                return false;
+        int dropCount = 0;
+
+        for (int i = 0; i < arr.size() - 1; i++) {
+            if (arr.get(i) > arr.get(i + 1)) {
+                dropCount++;
             }
         }
-        return true;
+
+        if (arr.get(arr.size() - 1) > arr.get(0)) {
+            dropCount++;
+        }
+
+        return dropCount <= 1;
     }
 }
 ```
 
+Notes:
+Original HumanEval prompt used without modification. Single drop check for rotation logic. All base tests passed.
 
-
-## Notes:
-Original HumanEval prompt used without modification. Code used without modification. All base tests passed.

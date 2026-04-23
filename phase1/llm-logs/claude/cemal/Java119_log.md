@@ -1,6 +1,6 @@
-# Log - Java/119 - matchParens
-**LLM:** Gemini (gemini-3-flash)
-**Date:** 2026-04-22
+Log - Java/119 - matchParens
+LLM: Sonnet 4.6
+Date: 2026-04-23
 
 ## Prompt Sent:
 ```java
@@ -36,31 +36,32 @@ import java.lang.*;
 
 class Solution {
     String matchParens(List<String> lst) {
-        List<String> S = Arrays.asList(lst.get(0) + lst.get(1), lst.get(1) + lst.get(0));
-        for (String s : S) {
-            int val = 0;
-            boolean balanced = true;
-            for (char i : s.toCharArray()) {
-                if (i == '(') {
-                    val += 1;
-                } else {
-                    val -= 1;
-                }
-                if (val < 0) {
-                    balanced = false;
-                    break;
-                }
+        String s1 = lst.get(0) + lst.get(1);
+        String s2 = lst.get(1) + lst.get(0);
+
+        return (isBalanced(s1) || isBalanced(s2)) ? "Yes" : "No";
+    }
+
+    private boolean isBalanced(String s) {
+        int count = 0;
+
+        for (char c : s.toCharArray()) {
+            if (c == '(') {
+                count++;
+            } else {
+                count--;
             }
-            if (balanced && val == 0) {
-                return "Yes";
+
+            if (count < 0) {
+                return false;
             }
         }
-        return "No";
+
+        return count == 0;
     }
 }
 ```
 
+Notes:
+Original HumanEval prompt used without modification. All base tests passed.
 
-
-## Notes:
-Original HumanEval prompt used without modification. Code used without modification. All base tests passed.

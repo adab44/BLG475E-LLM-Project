@@ -1,6 +1,6 @@
-# Log - Java/64 - vowelsCount
-**LLM:** Gemini (gemini-3-flash)
-**Date:** 2026-04-22
+Log - Java/64 - vowelsCount
+LLM: Sonnet 4.6
+Date: 2026-04-23
 
 ## Prompt Sent:
 ```java
@@ -34,22 +34,26 @@ import java.lang.*;
 
 class Solution {
     int vowelsCount(String s) {
-        String vowels = "aeiouAEIOU";
-        int n_vowels = 0;
-        for (char c : s.toCharArray()) {
+        int count = 0;
+        String lower = s.toLowerCase();
+        String vowels = "aeiou";
+
+        for (int i = 0; i < lower.length(); i++) {
+            char c = lower.charAt(i);
             if (vowels.indexOf(c) != -1) {
-                n_vowels += 1;
+                count++;
             }
         }
-        if (s.length() > 0 && (s.charAt(s.length() - 1) == 'y' || s.charAt(s.length() - 1) == 'Y')) {
-            n_vowels += 1;
+
+        if (lower.length() > 0 && lower.charAt(lower.length() - 1) == 'y') {
+            count++;
         }
-        return n_vowels;
+
+        return count;
     }
 }
 ```
 
+Notes:
+Original HumanEval prompt used without modification. All base tests passed.
 
-
-## Notes:
-Original HumanEval prompt used without modification. Code used without modification. All base tests passed.

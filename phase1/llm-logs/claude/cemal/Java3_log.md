@@ -1,6 +1,6 @@
-# Log - Java/3 - belowZero
-**LLM:** Gemini (gemini-3-flash)
-**Date:** 2026-04-22
+Log - Java/3 - belowZero
+LLM: Sonnet 4.6
+Date: 2026-04-23
 
 ## Prompt Sent:
 ```java
@@ -45,7 +45,6 @@ class Solution {
 }
 ```
 
-
-
-## Notes:
+Notes:
 Original HumanEval prompt used without modification. Code used without modification. All base tests passed.
+

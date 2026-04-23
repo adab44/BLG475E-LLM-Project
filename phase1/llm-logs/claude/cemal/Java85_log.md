@@ -1,6 +1,6 @@
-# Log - Java/85 - add
-**LLM:** Gemini (gemini-3-flash)
-**Date:** 2026-04-22
+Log - Java/85 - add
+LLM: Sonnet 4.6
+Date: 2026-04-23
 
 ## Prompt Sent:
 ```java
@@ -29,17 +29,18 @@ import java.lang.*;
 class Solution {
     int add(List<Integer> lst) {
         int sum = 0;
+
         for (int i = 1; i < lst.size(); i += 2) {
             if (lst.get(i) % 2 == 0) {
                 sum += lst.get(i);
             }
         }
+
         return sum;
     }
 }
 ```
 
+Notes:
+Original HumanEval prompt used without modification. Logic correctly identifies odd indices (1, 3, 5...). All base tests passed.
 
-
-## Notes:
-Original HumanEval prompt used without modification. Code used without modification. All base tests passed.
