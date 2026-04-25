@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="tr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Java160_doAlgebra.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Java160</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Java160_doAlgebra.java</span></div><h1>Java160_doAlgebra.java</h1><pre class="source lang-java linenums">/* @Authors
+ * Student Names: Ada Berfu Kaynak
+ * Student IDs: 820210314
+ */
+import java.util.*;
+<span class="fc" id="L6">class Solution {</span>
+    public int doAlgebra(List&lt;String&gt; operator, List&lt;Integer&gt; operand) {
+<span class="fc" id="L8">        List&lt;Double&gt; values = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L9" title="All 2 branches covered.">        for (int num : operand) values.add((double) num);</span>
+<span class="fc" id="L10">        List&lt;String&gt; ops = new ArrayList&lt;&gt;(operator);</span>
+<span class="fc bfc" id="L11" title="All 2 branches covered.">        for (int i = 0; i &lt; ops.size(); i++) {</span>
+<span class="fc bfc" id="L12" title="All 2 branches covered.">            if (ops.get(i).equals(&quot;**&quot;)) {</span>
+<span class="fc" id="L13">                double res = Math.pow(values.get(i), values.get(i + 1));</span>
+<span class="fc" id="L14">                values.set(i, res);</span>
+<span class="fc" id="L15">                values.remove(i + 1);</span>
+<span class="fc" id="L16">                ops.remove(i);</span>
+<span class="fc" id="L17">                i--;</span>
+            }
+        }
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        for (int i = 0; i &lt; ops.size(); i++) {</span>
+<span class="fc" id="L21">            String op = ops.get(i);</span>
+<span class="fc bfc" id="L22" title="All 4 branches covered.">            if (op.equals(&quot;*&quot;) || op.equals(&quot;/&quot;)) {</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">                double res = op.equals(&quot;*&quot;) ? values.get(i) * values.get(i + 1) : Math.floor(values.get(i) / values.get(i + 1));</span>
+<span class="fc" id="L24">                values.set(i, res);</span>
+<span class="fc" id="L25">                values.remove(i + 1);</span>
+<span class="fc" id="L26">                ops.remove(i);</span>
+<span class="fc" id="L27">                i--;</span>
+            }
+        }
+<span class="fc" id="L30">        double result = values.get(0);</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">        for (int i = 0; i &lt; ops.size(); i++) {</span>
+<span class="fc" id="L32">            String op = ops.get(i);</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">            if (op.equals(&quot;+&quot;)) result += values.get(i + 1);</span>
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">            else if (op.equals(&quot;-&quot;)) result -= values.get(i + 1);</span>
+        }
+<span class="fc" id="L36">        return (int) Math.round(result);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

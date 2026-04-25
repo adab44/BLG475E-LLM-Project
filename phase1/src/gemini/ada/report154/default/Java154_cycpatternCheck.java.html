@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="tr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Java154_cycpatternCheck.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Java154</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Java154_cycpatternCheck.java</span></div><h1>Java154_cycpatternCheck.java</h1><pre class="source lang-java linenums">/* @Authors
+ * Student Names: Ada Berfu Kaynak
+ * Student IDs: 820210314
+ */
+import java.util.*;
+import java.lang.*;
+<span class="fc" id="L7">class Solution {</span>
+    public boolean cycpatternCheck(String a, String b) {
+<span class="fc" id="L9">        int n = b.length();</span>
+<span class="fc" id="L10">        String combined = b + b;</span>
+<span class="fc bfc" id="L11" title="All 2 branches covered.">        for (int i = 0; i &lt; n; i++) {</span>
+<span class="fc" id="L12">            String rotation = combined.substring(i, i + n);</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">            if (a.contains(rotation)) return true;</span>
+        }
+<span class="fc" id="L15">        return false;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

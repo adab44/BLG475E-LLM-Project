@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="tr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TestJava145.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Java57</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">TestJava145.java</span></div><h1>TestJava145.java</h1><pre class="source lang-java linenums">import java.util.*;
+import java.lang.*;
+<span class="nc" id="L3">public class TestJava145 {</span>
+    public static void main(String[] args) {
+<span class="nc" id="L5">        Solution s = new Solution();</span>
+<span class="nc" id="L6">        List&lt;Boolean&gt; correct = Arrays.asList(</span>
+<span class="nc" id="L7">                s.orderByPoints(new ArrayList&lt;&gt;(Arrays.asList(1, 11, -1, -11, -12))).equals(Arrays.asList(-1, -11, 1, -12, 11)),</span>
+<span class="nc" id="L8">                s.orderByPoints(new ArrayList&lt;&gt;(Arrays.asList(1234, 423, 463, 145, 2, 423, 423, 53, 6, 37, 3457, 3, 56, 0, 46))).equals(Arrays.asList(0, 2, 3, 6, 53, 423, 423, 423, 1234, 145, 37, 46, 56, 463, 3457)),</span>
+<span class="nc" id="L9">                s.orderByPoints(new ArrayList&lt;&gt;(List.of())).equals(List.of()),</span>
+<span class="nc" id="L10">                s.orderByPoints(new ArrayList&lt;&gt;(Arrays.asList(1, -11, -32, 43, 54, -98, 2, -3))).equals(Arrays.asList(-3, -32, -98, -11, 1, 2, 43, 54)),</span>
+<span class="nc" id="L11">                s.orderByPoints(new ArrayList&lt;&gt;(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11))).equals(Arrays.asList(1, 10, 2, 11, 3, 4, 5, 6, 7, 8, 9)),</span>
+<span class="nc" id="L12">                s.orderByPoints(new ArrayList&lt;&gt;(Arrays.asList(0, 6, 6, -76, -21, 23, 4))).equals(Arrays.asList(-76, -21, 0, 4, 23, 6, 6))</span>
+        );
+<span class="nc bnc" id="L14" title="All 2 branches missed.">        if (correct.contains(false)) {</span>
+<span class="nc" id="L15">            System.out.println(&quot;❌ Java145 orderByPoints - FAILED&quot;);</span>
+        } else {
+<span class="nc" id="L17">            System.out.println(&quot;✅ Java145 orderByPoints - PASSED&quot;);</span>
+        }
+<span class="nc" id="L19">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

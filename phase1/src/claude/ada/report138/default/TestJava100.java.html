@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="tr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TestJava100.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Java138</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">TestJava100.java</span></div><h1>TestJava100.java</h1><pre class="source lang-java linenums">import java.util.*;
+import java.lang.*;
+<span class="nc" id="L3">public class TestJava100 {</span>
+    public static void main(String[] args) {
+<span class="nc" id="L5">        Solution s = new Solution();</span>
+<span class="nc" id="L6">        List&lt;Boolean&gt; correct = Arrays.asList(</span>
+<span class="nc" id="L7">                s.makeAPile(3).equals(Arrays.asList(3, 5, 7)),</span>
+<span class="nc" id="L8">                s.makeAPile(4).equals(Arrays.asList(4, 6, 8, 10)),</span>
+<span class="nc" id="L9">                s.makeAPile(5).equals(Arrays.asList(5, 7, 9, 11, 13)),</span>
+<span class="nc" id="L10">                s.makeAPile(6).equals(Arrays.asList(6, 8, 10, 12, 14, 16)),</span>
+<span class="nc" id="L11">                s.makeAPile(8).equals(Arrays.asList(8, 10, 12, 14, 16, 18, 20, 22))</span>
+        );
+<span class="nc bnc" id="L13" title="All 2 branches missed.">        if (correct.contains(false)) {</span>
+<span class="nc" id="L14">            System.out.println(&quot;❌ Java100 makeAPile - FAILED&quot;);</span>
+        } else {
+<span class="nc" id="L16">            System.out.println(&quot;✅ Java100 makeAPile - PASSED&quot;);</span>
+        }
+<span class="nc" id="L18">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
