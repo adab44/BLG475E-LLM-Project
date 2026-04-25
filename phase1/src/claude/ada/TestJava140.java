@@ -8,7 +8,11 @@ public class TestJava140 {
                 Objects.equals(s.fixSpaces("Mudasir Hanif "), "Mudasir_Hanif_"),
                 Objects.equals(s.fixSpaces("Yellow Yellow  Dirty  Fellow"), "Yellow_Yellow__Dirty__Fellow"),
                 Objects.equals(s.fixSpaces("Exa   mple"), "Exa-mple"),
-                Objects.equals(s.fixSpaces("   Exa 1 2 2 mple"), "-Exa_1_2_2_mple")
+                Objects.equals(s.fixSpaces("   Exa 1 2 2 mple"), "-Exa_1_2_2_mple"),
+                Objects.equals(s.fixSpaces(""), ""),            // boş string
+                Objects.equals(s.fixSpaces("   "), "-"),        // sadece boşluk
+                Objects.equals(s.fixSpaces("Ex  1"), "Ex__1"), // çift boşluk
+                Objects.equals(s.fixSpaces("Ex "), "Ex_")      // sondaki boşluk
         );
         if (correct.contains(false)) {
             System.out.println("❌ Java140 fixSpaces - FAILED");

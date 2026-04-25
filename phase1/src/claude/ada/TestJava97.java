@@ -11,7 +11,9 @@ public class TestJava97 {
                 s.multiply(76, 67) == 42,
                 s.multiply(17, 27) == 49,
                 s.multiply(0, 1) == 0,
-                s.multiply(0, 0) == 0
+                s.multiply(0, 0) == 0,
+                s.multiply(-14, -15) == 20, // negatif çarpı negatif
+                s.multiply(-10, 0) == 0     // negatif çarpı sıfır
         );
         if (correct.contains(false)) {
             System.out.println("❌ Java97 multiply - FAILED");

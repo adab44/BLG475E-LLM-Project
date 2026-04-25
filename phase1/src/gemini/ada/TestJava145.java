@@ -9,7 +9,9 @@ public class TestJava145 {
                 s.orderByPoints(new ArrayList<>(List.of())).equals(List.of()),
                 s.orderByPoints(new ArrayList<>(Arrays.asList(1, -11, -32, 43, 54, -98, 2, -3))).equals(Arrays.asList(-3, -32, -98, -11, 1, 2, 43, 54)),
                 s.orderByPoints(new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11))).equals(Arrays.asList(1, 10, 2, 11, 3, 4, 5, 6, 7, 8, 9)),
-                s.orderByPoints(new ArrayList<>(Arrays.asList(0, 6, 6, -76, -21, 23, 4))).equals(Arrays.asList(-76, -21, 0, 4, 23, 6, 6))
+                s.orderByPoints(new ArrayList<>(Arrays.asList(0, 6, 6, -76, -21, 23, 4))).equals(Arrays.asList(-76, -21, 0, 4, 23, 6, 6)),
+                s.orderByPoints(new ArrayList<>(Arrays.asList(5))).equals(Arrays.asList(5)),           // tek eleman
+                s.orderByPoints(new ArrayList<>(Arrays.asList(0, 11, 2))).equals(Arrays.asList(0, 11, 2)) // aynı digit sum
         );
         if (correct.contains(false)) {
             System.out.println("❌ Java145 orderByPoints - FAILED");

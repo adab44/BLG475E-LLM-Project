@@ -11,7 +11,10 @@ public class TestJava138 {
                 s.isEqualToSumEven(11) == false,
                 s.isEqualToSumEven(12) == true,
                 s.isEqualToSumEven(13) == false,
-                s.isEqualToSumEven(16) == true
+                s.isEqualToSumEven(16) == true,
+                s.isEqualToSumEven(0) == false,   // sıfır girdi
+                s.isEqualToSumEven(2) == false,   // küçük çift sayı
+                s.isEqualToSumEven(-4) == false   // negatif sayı
         );
         if (correct.contains(false)) {
             System.out.println("❌ Java138 isEqualToSumEven - FAILED");

@@ -9,7 +9,10 @@ public class TestJava44 {
                 Objects.equals(s.changeBase(234, 2), "11101010"),
                 Objects.equals(s.changeBase(16, 2), "10000"),
                 Objects.equals(s.changeBase(8, 2), "1000"),
-                Objects.equals(s.changeBase(7, 2), "111")
+                Objects.equals(s.changeBase(7, 2), "111"),
+                Objects.equals(s.changeBase(1, 2), "1"),         // minimum x
+                Objects.equals(s.changeBase(255, 2), "11111111"), // büyük x sınır değeri
+                Objects.equals(s.changeBase(8, 9), "8")           // maksimuma yakın taban
         );
         boolean extraTest = true;
         for (int x = 2; x < 8; x++) {

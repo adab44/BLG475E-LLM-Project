@@ -9,7 +9,10 @@ public class TestJava154 {
                 s.cycpatternCheck("whattup", "ptut") == false,
                 s.cycpatternCheck("efef", "fee") == true,
                 s.cycpatternCheck("abab", "aabb") == false,
-                s.cycpatternCheck("winemtt", "tinem") == true
+                s.cycpatternCheck("winemtt", "tinem") == true,
+                s.cycpatternCheck("ab", "abc") == false,    // b uzunluğu a'dan büyük
+                s.cycpatternCheck("hello", "h") == true,   // tek karakterli pattern
+                s.cycpatternCheck("abc", "abc") == true    // eşit uzunluk
         );
         if (correct.contains(false)) {
             System.out.println("❌ Java154 cycpatternCheck - FAILED");
