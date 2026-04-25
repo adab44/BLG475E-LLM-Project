@@ -11,7 +11,13 @@ public class TestJava44 {
                 Objects.equals(s.changeBase(8, 2), "1000"),
                 Objects.equals(s.changeBase(7, 2), "111")
         );
-        if (correct.contains(false)) {
+        boolean extraTest = true;
+        for (int x = 2; x < 8; x++) {
+            if (!Objects.equals(s.changeBase(x, x + 1), String.valueOf(x))) {
+                extraTest = false;
+            }
+        }
+        if (correct.contains(false) || !extraTest) {
             System.out.println("❌ Java44 changeBase - FAILED");
         } else {
             System.out.println("✅ Java44 changeBase - PASSED");
