@@ -44,3 +44,51 @@ class Solution {
 
 ## Notes:
 Original HumanEval prompt used without modification. Code used without modification. Base test FAILED - negative number digit sum calculation differs from expected behavior.
+
+## Refactoring - Round 2
+**Date:** 2026-04-25
+
+### Problem:
+Base test FAILED - negative number digit sum calculated incorrectly.
+
+### Prompt Sent:
+Original HumanEval prompt + "The previous solution failed because negative numbers' digit sums were calculated incorrectly. For negative numbers, the first digit should be negative. Please fix this."
+
+### Agent Response:
+import java.util.*;
+
+class Solution {
+    public List<Integer> orderByPoints(List<Integer> nums) {
+        List<Integer> result = new ArrayList<>(nums);
+        Collections.sort(result, new Comparator<Integer>() {
+            @Override
+            public int compare(Integer a, Integer b) {
+                return Integer.compare(getDigitSum(a), getDigitSum(b));
+            }
+        });
+        return result;
+    }
+
+    private int getDigitSum(int n) {
+        String s = String.valueOf(n);
+        int sum = 0;
+        int startIdx = 0;
+        boolean isNegative = false;
+        if (n < 0) {
+            isNegative = true;
+            startIdx = 1;
+        }
+        for (int i = startIdx; i < s.length(); i++) {
+            int digit = Character.getNumericValue(s.charAt(i));
+            if (isNegative && i == startIdx) {
+                sum -= digit;
+            } else {
+                sum += digit;
+            }
+        }
+        return sum;
+    }
+}
+
+### Notes:
+Code fixed - negative first digit now handled correctly. All tests passed after refactoring.
