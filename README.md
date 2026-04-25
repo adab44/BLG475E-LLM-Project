@@ -19,7 +19,6 @@ To ensure consistency across the team and successful execution of the testing pi
 
 ### 1. Prerequisite Software
 * **Java Development Kit (JDK):** Install **JDK 17 or 21** (LTS versions). Ensure your `JAVA_HOME` environment variable is set correctly.
-* **Build Tool:** This project uses **Maven** for dependency management and running tests.
 * **IDE:** **VS Code** is recommended for this project.
 
 ### 2. Recommended VS Code Extensions
@@ -27,13 +26,10 @@ Install the **Extension Pack for Java** from Microsoft, which includes:
 * **Language Support for Java™ by Red Hat**: For code completion and error checking.
 * **Debugger for Java**: For troubleshooting logic in your solutions.
 * **Test Runner for Java**: To execute JUnit tests directly from the Sidebar.
-* **Maven for Java**: To manage project lifecycles.
 
 ### 3. Project Configuration
-* Ensure your `pom.xml` is configured to use **JUnit 6**.
 * When adding your assigned tasks, follow the established directory structure:
-  * Source code: `src/main/java/`
-  * Tests: `src/test/java/`
+  * Source code & Tests: `phase1/src/`
 
 ---
 
