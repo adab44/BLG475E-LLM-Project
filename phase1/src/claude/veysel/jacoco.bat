@@ -15,21 +15,26 @@ javac --release 21 -d out18 Java18_howManyTimes.java TestJava18.java
 java -javaagent:jacoco-agent.jar=destfile=jacoco18.exec -cp out18 TestJava18
 java -jar jacoco-cli.jar report jacoco18.exec --classfiles out18 --sourcefiles . --html coverage-report-18
 
+
 javac --release 21 -d out23 Java23_strlen.java TestJava23.java
 java -javaagent:jacoco-agent.jar=destfile=jacoco23.exec -cp out23 TestJava23
 java -jar jacoco-cli.jar report jacoco23.exec --classfiles out23 --sourcefiles . --html coverage-report-23
+
 
 javac --release 21 -d out27 Java27_flipCase.java TestJava27.java
 java -javaagent:jacoco-agent.jar=destfile=jacoco27.exec -cp out27 TestJava27
 java -jar jacoco-cli.jar report jacoco27.exec --classfiles out27 --sourcefiles . --html coverage-report-27
 
+
 javac --release 21 -d out32 Java32_findZero.java TestJava32.java
 java -javaagent:jacoco-agent.jar=destfile=jacoco32.exec -cp out32 TestJava32
 java -jar jacoco-cli.jar report jacoco32.exec --classfiles out32 --sourcefiles . --html coverage-report-32
+  
 
 javac --release 21 -d out34 Java34_uniqueSorted.java TestJava34.java
 java -javaagent:jacoco-agent.jar=destfile=jacoco34.exec -cp out34 TestJava34
 java -jar jacoco-cli.jar report jacoco34.exec --classfiles out34 --sourcefiles . --html coverage-report-34
+
 
 
 javac --release 21 -d out48 Java48_isPalindrome.java TestJava48.java
