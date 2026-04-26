@@ -15,7 +15,9 @@ public class TestJava15 {
                 s.stringSequence(10).equals("0 1 2 3 4 5 6 7 8 9 10")
         );
         if (correct.contains(false)) {
-            throw new AssertionError();
+            System.out.println("❌ Java15 stringSequence - FAILED");
+        } else {
+            System.out.println("✅ Java15 stringSequence - PASSED");
         }
     }
 }

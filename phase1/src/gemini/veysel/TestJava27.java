@@ -18,7 +18,9 @@ public class TestJava27 {
                 Objects.equals(s.flipCase("These violent delights have violent ends"), "tHESE VIOLENT DELIGHTS HAVE VIOLENT ENDS")
         );
         if (correct.contains(false)) {
-            throw new AssertionError();
+            System.out.println("❌ Java27 flipCase - FAILED");
+        } else {
+            System.out.println("✅ Java27 flipCase - PASSED");
         }
     }
 }

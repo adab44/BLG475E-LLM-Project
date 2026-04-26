@@ -20,7 +20,9 @@ public class TestJava102 {
                 s.chooseNum(546, 546) == 546
         );
         if (correct.contains(false)) {
-            throw new AssertionError();
+            System.out.println("❌ Java102 chooseNum - FAILED");
+        } else {
+            System.out.println("✅ Java102 chooseNum - PASSED");
         }
     }
 }

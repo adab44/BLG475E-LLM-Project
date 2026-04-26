@@ -20,7 +20,9 @@ public class TestJava48{
                 !s.isPalindrome("xywzx")
         );
         if (correct.contains(false)) {
-            throw new AssertionError();
+            System.out.println("❌ Java48 isPalindrome - FAILED");
+        } else {
+            System.out.println("✅ Java48 isPalindrome - PASSED");
         }
     }
 }

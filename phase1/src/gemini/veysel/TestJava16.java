@@ -21,7 +21,9 @@ public class TestJava16 {
                 s.countDistinctCharacters("Jerry jERRY JeRRRY") == 5
         );
         if (correct.contains(false)) {
-            throw new AssertionError();
+            System.out.println("❌ Java16 countDistinctCharacters - FAILED");
+        } else {
+            System.out.println("✅ Java16 countDistinctCharacters - PASSED");
         }
     }
 }

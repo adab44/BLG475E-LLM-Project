@@ -38,7 +38,9 @@ public class TestJava87 {
                 s.getRow(Arrays.asList(List.of(), List.of(1), Arrays.asList(1, 2, 3)), 3).equals(List.of(Arrays.asList(2, 2)))
         );
         if (correct.contains(false)) {
-            throw new AssertionError();
+            System.out.println("❌ Java87 getRow - FAILED");
+        } else {
+            System.out.println("✅ Java87 getRow - PASSED");
         }
     }
 }

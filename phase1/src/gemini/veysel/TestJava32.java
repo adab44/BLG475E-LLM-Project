@@ -4,7 +4,6 @@
  */
 
 
-```
 import java.util.*;
 import java.lang.*;
 public class TestJava32 {
@@ -23,8 +22,15 @@ public class TestJava32 {
             }
             double solution = s.findZero(coeffs);
             if (Math.abs(s.poly(coeffs, solution)) > 1e-4) {
-                throw new AssertionError();
+                System.out.println("❌ Java32 findZero - FAILED");
+            }
+            else {
+            System.out.println("✅ Java32 findZero - PASSED");
             }
         }
     }
 }
+
+
+
+        

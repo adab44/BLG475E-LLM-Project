@@ -16,7 +16,9 @@ public class TestJava23 {
                 s.strlen("asdasnakj") == 9
         );
         if (correct.contains(false)) {
-            throw new AssertionError();
+            System.out.println("❌ Java23 strlen - FAILED");
+        } else {
+            System.out.println("✅ Java23 strlen - PASSED");
         }
     }
 }
