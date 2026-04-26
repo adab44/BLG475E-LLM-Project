@@ -11,7 +11,7 @@ public class TestJava32JUnit {
 
     @Test
     public void testPolyEvaluation() {
-        assertEquals(6.0, s.poly(Arrays.asList(1.0, 2.0, 1.0), 1.0), 0.001);
+        assertEquals(4.0, s.poly(Arrays.asList(1.0, 2.0, 1.0), 1.0), 0.001);
     }
 
     @Test
