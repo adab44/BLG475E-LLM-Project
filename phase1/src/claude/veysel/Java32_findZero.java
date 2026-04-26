@@ -3,8 +3,6 @@
  * Student IDs: 150210702
  */
 
-
-```
 import java.util.*;
 import java.lang.*;
 
