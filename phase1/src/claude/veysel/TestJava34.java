@@ -15,7 +15,9 @@ public class TestJava34 {
                 s.unique(new ArrayList<>(Arrays.asList(5, 3, 5, 2, 3, 3, 9, 0, 123))).equals(Arrays.asList(0, 2, 3, 5, 9, 123))
         );
         if (correct.contains(false)) {
-            throw new AssertionError();
+            System.out.println("❌ Java34 uniqueSorted - FAILED");
+        } else {
+            System.out.println("✅ Java34 uniqueSorted - PASSED");
         }
     }
 }

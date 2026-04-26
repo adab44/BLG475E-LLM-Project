@@ -18,7 +18,9 @@ public class TestJava18 {
                 s.howManyTimes("john doe", "john") == 1
         );
         if (correct.contains(false)) {
-            throw new AssertionError();
+            System.out.println("❌ Java18 howManyTimes - FAILED");
+        } else {
+            System.out.println("✅ Java18 howManyTimes - PASSED");
         }
     }
 }

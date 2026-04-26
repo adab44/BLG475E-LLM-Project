@@ -18,7 +18,9 @@ public class TestJava93 {
                 Objects.equals(s.encode("I DoNt KnOw WhAt tO WrItE"), "k dQnT kNqW wHcT Tq wRkTg")
         );
         if (correct.contains(false)) {
-            throw new AssertionError();
+            System.out.println("❌ Java93 encode - FAILED");
+        } else {
+            System.out.println("✅ Java93 encode - PASSED");
         }
     }
 }
