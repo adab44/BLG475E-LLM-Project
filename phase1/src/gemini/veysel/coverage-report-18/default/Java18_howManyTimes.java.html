@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Java18_howManyTimes.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCo Coverage Report</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Java18_howManyTimes.java</span></div><h1>Java18_howManyTimes.java</h1><pre class="source lang-java linenums">/* @Authors
+ * Student Names: Veysel Çelik
+ * Student IDs: 150210702
+ */
+
+
+
+import java.util.*;
+import java.lang.*;
+
+<span class="fc" id="L11">class Solution {</span>
+    /**
+    Find how many times a given substring can be found in the original string. Count overlapping cases.
+    &gt;&gt;&gt; howManyTimes(&quot;&quot;, &quot;a&quot;)
+    0
+    &gt;&gt;&gt; howManyTimes(&quot;aaa&quot;, &quot;a&quot;)
+    3
+    &gt;&gt;&gt; howManyTimes(&quot;aaaa&quot;, &quot;aa&quot;)
+    3
+     */
+    public int howManyTimes(String string, String substring) {
+        // Handle edge case: if substring is empty, typically we return 0 or 
+        // the length of the string + 1, but based on your test cases, 
+        // we'll return 0 if the substring is empty to prevent infinite loops.
+<span class="pc bpc" id="L25" title="2 of 4 branches missed.">        if (substring == null || substring.isEmpty()) {</span>
+<span class="nc" id="L26">            return 0;</span>
+        }
+
+<span class="fc" id="L29">        int count = 0;</span>
+<span class="fc" id="L30">        int n = string.length();</span>
+<span class="fc" id="L31">        int m = substring.length();</span>
+
+        // Iterate through the string up to the point where the substring can still fit
+<span class="fc bfc" id="L34" title="All 2 branches covered.">        for (int i = 0; i &lt;= n - m; i++) {</span>
+            // Check if the substring matches the portion of the string starting at index i
+<span class="fc bfc" id="L36" title="All 2 branches covered.">            if (string.substring(i, i + m).equals(substring)) {</span>
+<span class="fc" id="L37">                count++;</span>
+            }
+        }
+
+<span class="fc" id="L41">        return count;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

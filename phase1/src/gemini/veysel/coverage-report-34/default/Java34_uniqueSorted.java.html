@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Java34_uniqueSorted.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCo Coverage Report</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Java34_uniqueSorted.java</span></div><h1>Java34_uniqueSorted.java</h1><pre class="source lang-java linenums">import java.util.*;
+import java.util.stream.Collectors;
+
+<span class="fc" id="L4">class Solution {</span>
+    /**
+    Return sorted unique elements in a list
+    &gt;&gt;&gt; unique(Arrays.asList(5, 3, 5, 2, 3, 3, 9, 0, 123))
+    [0, 2, 3, 5, 9, 123]
+     */
+    public List&lt;Integer&gt; unique(List&lt;Integer&gt; l) {
+<span class="pc bpc" id="L11" title="1 of 2 branches missed.">        if (l == null) {</span>
+<span class="nc" id="L12">            return new ArrayList&lt;&gt;();</span>
+        }
+        
+<span class="fc" id="L15">        return l.stream()</span>
+<span class="fc" id="L16">                .distinct()</span>
+<span class="fc" id="L17">                .sorted()</span>
+<span class="fc" id="L18">                .collect(Collectors.toList());</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
